@@ -1,0 +1,28 @@
+@media screen and (max-width: 1232px) {
+    .grid-reviews {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media screen and (max-width: 1045px) {
+    .grid-reviews {
+        grid-template-columns: 100%;
+    }
+    .grid-reviews-card:first-of-type {
+        max-width: 500px;
+        margin: 0 auto 20px auto;
+    }
+    .grid-reviews__col {
+        margin: 0;
+    }
+    .grid-reviews-card__image {
+        min-width: 250px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .grid-reviews-card__image {
+        min-width: 150px;
+        margin: auto;
+    }
+}

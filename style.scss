@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --header-color: #758090; 
+  --border-color: #E9ECF2;
+  --text-color: #293238;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-color);
+
+}
+
+.section-reviews {
+  width: 100%;
+  text-align: center;
+  h1 {
+    color: var(--header-color);
+    letter-spacing: 1px;
+  }
+}
+
+.section-reviews__decoration {
+  position: absolute;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  left: -112px;
+  top: -60px;
+  background: linear-gradient(145.44deg, #E8EDF0 10.54%, rgba(232, 237, 240, 0) 85.04%);
+  z-index: -1;
+}
+
+.grid-reviews {
+  width: 80%;
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 29% 42% 29%;
+}
+
+.grid-reviews__col {
+  margin: 10px;
+}
+
+.grid-reviews-card {
+  width: 100%;
+  min-height: 180px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+}
+
+.grid-reviews-card_horizontal {
+  @extend .grid-reviews-card;
+  display: flex;
+}
+
+.grid-reviews-card__image {
+  min-width: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+  
+  img {
+    width: 100%
+  }
+}
+
+.grid-reviews-card_horizontal > .grid-reviews-card__image {
+  @extend .grid-reviews-card__image;
+  img {
+    width: auto;
+  }
+  div {
+    max-width: 250px;
+    max-height: 250px;
+  }
+}
+
+.grid-reviews-card__body {
+  margin: 20px;
+  text-align: left;
+  p {
+    margin: 0;
+  }
+}
+
+.grid-reviews-card__body > div:last-child {
+  margin-top: 20px;
+}
+
+.grid-reviews-card__avatar {
+  margin: auto 10px;
+}
+
+.grid-reviews-card__author {
+  display: flex;
+}
+
+.grid-reviews-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-reviews-card__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.grid-reviews-card__name {
+  font-weight: bold;
+}
+
+.grid-reviews-card__role {
+  font-weight: 300;
+  color: rgb(177, 177, 177);
+}
+
