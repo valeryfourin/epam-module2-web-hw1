@@ -1,0 +1,26 @@
+{
+  "name": "topic2.2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.1",
+    "sass": "^1.43.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeryfourin/epam-module2-web-hw1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valeryfourin/epam-module2-web-hw1/issues"
+  },
+  "homepage": "https://github.com/valeryfourin/epam-module2-web-hw1#readme"
+}

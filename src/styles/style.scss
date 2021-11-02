@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('./responsive.scss');
+
+$medium-color: #758090; 
+$light-color: #E9ECF2;
+$dark-color: #293238;
+$text-font-size: 14px;
+$title-font-size: 36px;
+
+body, p,
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: $dark-color;
+  font-size: $text-font-size;
+}
+
+.reviews {
+  width: 100%;
+  text-align: center;
+
+  &__title {
+    color: $medium-color;
+    font-size: $title-font-size;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 0em;
+    margin: 100px 0;
+  }
+
+  &__decoration {
+    position: absolute;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    left: -112px;
+    top: -60px;
+    background: linear-gradient(145.44deg, #E8EDF0 10.54%, rgba(232, 237, 240, 0) 85.04%);
+    z-index: -1;
+  }
+
+  &__button {
+    width: 150px;
+    height: 70px;
+    border: none;
+    border-radius: 10px;
+    background-color: $light-color;
+    margin: 50px;
+    font-size: $title-font-size;
+    color: $medium-color;
+    transition: all .2s ease-in-out;
+  }
+
+  &__button:hover {
+    -webkit-box-shadow: 4px 4px 24px 0px rgba(132, 162, 186, 0.2);
+    -moz-box-shadow: 4px 4px 24px 0px rgba(132, 162, 186, 0.2);
+    box-shadow: 4px 4px 24px 0px rgba(132, 162, 186, 0.2);
+  }
+
+  &__button:active {
+    background-color: $medium-color;
+    color: $light-color;
+  }
+
+  &__button--hidden {
+    display: none;
+  }
+}
+
+.cards {
+  width: 80%;
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 29% 42% 29%;
+  grid-gap: 20px;
+
+  &--hidden {
+    display: none;
+  }
+
+  @include media-very-large {
+    grid-template-columns: 50% 50%;
+  }
+  @include media-large {
+    grid-template-columns: 100%;
+  }
+}
+
+.card {
+  width: 100%;
+  min-height: 180px;
+  margin-bottom: 20px;
+  border: 1px solid $light-color;
+  border-radius: 15px;
+
+  &__image {
+    min-width: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    
+    img {
+      width: 100%
+    }
+
+    @include media-large {
+      min-width: 250px;
+    }
+
+    @include media-medium {
+      min-width: 150px;
+      margin: auto;
+    }
+  }
+
+  &--horizontal {
+    display: flex;
+    @include media-medium {
+      max-width: 500px;
+      margin: 0 auto 20px auto;
+    }
+
+    & > .card__image {
+      
+      img {
+        width: auto;
+        @include media-medium {
+          width: -webkit-fill-available;
+        }
+      }
+      div {
+        max-width: 250px;
+        max-height: 250px;
+        @include media-medium {
+          max-width: 150px;
+          max-height: 150px;
+        }
+      }
+    }
+  }
+
+  &__avatar {
+    margin: auto 10px;
+  }
+  
+  &__author {
+    display: flex;
+  }
+  
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%; 
+    max-height: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  &__name {
+    font-weight: bold;
+  }
+  
+  &__role {
+    font-weight: 300;
+    color: rgb(177, 177, 177);
+  }
+
+  &__rating {
+    width: 70px;
+  }
+
+  &__body {
+    margin: 20px;
+    text-align: left;
+    p {
+      margin: 0;
+    }
+    & > *:last-child {
+      margin-top: 20px;
+    } 
+  }
+
+  &:first-of-type {
+    @include media-large {
+      max-width: 500px;
+      margin: 0 auto 20px auto;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+}

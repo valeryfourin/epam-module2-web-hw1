@@ -1,0 +1,9 @@
+@mixin media-medium {
+    @media only screen and (max-width: 900px) { @content; }
+}
+@mixin media-large {
+    @media only screen and (max-width: 1045px) { @content; }
+}
+@mixin media-very-large {
+    @media only screen and (max-width: 1232px) { @content; }
+}
